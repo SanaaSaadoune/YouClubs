@@ -1,3 +1,7 @@
+<?php 
+    include '../Model/Affichage.php';
+    include '../Model/Cloture.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +19,16 @@
       include '../Includes/HeaderClub.php'
     ?>
     <div class="space"></div>
-    <h2> Clôture de l'événement "________" </h2>
+    <h2> Clôture de l'événement "<?php echo $row->nom_event ?>" </h2>
+    <?php echo $Success; ?> 
     <div class="space"></div>
     <div class="firstPart">
         <div class="formPart">
+          <form method="post"  enctype="multipart/form-data">
             <div>
                 <label for="article"> Article : </label>
                 <textarea name="article" id="article"></textarea>
+                <p style="color:red;"> <?php echo $articleERROR; ?></p>
             </div>
             <div>
                 <label for="photo"> Photos : </label>
@@ -35,13 +42,12 @@
             </div>
             <div>
                 <input type="file" name="photo4" id="photo4">
+                <p style="color:red;"> <?php echo $photoERROR; ?></p>
             </div>
             <div>
-                <input type="file" name="photo5" id="photo5">
+                <button type="submit" name="Cloturer"> Clôturer </button> 
             </div>
-            <div>
-                <button> Clôturer </button> 
-            </div>
+          </form>
         </div>
         <div class="pictPart">
             <img src="../Public/Images/Cloture_img.svg" alt="Image">
