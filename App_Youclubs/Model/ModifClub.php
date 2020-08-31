@@ -21,7 +21,7 @@ include '../Includes/functions.php';
         if(isset($_POST['Modifier'])){
           $nom = checkInput($_POST['nom']);
           $email  = checkInput($_POST['email']);
-          $hashedMdp = checkInput($_POST['mdp']);
+          $mdp = checkInput($_POST['mdp']);
           $hashedMdp = sha1($mdp);
           $Cmdp = checkInput($_POST['Cmdp']);
           $ChashedMdp = sha1($Cmdp);

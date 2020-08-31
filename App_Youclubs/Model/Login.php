@@ -4,7 +4,7 @@
         header('location: ../View/Gestion_event.php'); // REDIRECT TO MANAGEMENT PAGE
         exit();
     } elseif (isset($_SESSION['membre'])) { // IF SESSION 'MEMBER' IS ALREADY OPEN
-        header('location: ../View/Accueil.php'); // REDIRECT TO HOME PAGE
+        header('location: ../View/Profil.php'); // REDIRECT TO HOME PAGE
         exit();
     }
 
@@ -26,7 +26,7 @@
         if ($count > 0) {
             $_SESSION['membre'] = $row->nom_membre ." ". $row->prenom_membre  ;// SESSION USERNAME
             $_SESSION['id_membre'] = $row->id_membre ;// ID USER
-            header('location: ../View/Accueil.php'); // REDIRECT VERS PAGE HOME
+            header('location: ../View/Profil.php'); // REDIRECT VERS PAGE HOME
             exit();
         } 
 
