@@ -94,11 +94,26 @@ body .firstPart .formPart div {
 }
 
 body .firstPart .formPart div input, body .firstPart .formPart div textarea {
-  width: 80%;
+  width: 400px;
   background-color: #E8EFF6;
   border-radius: 8px;
   height: 40px;
   border-style: none;
+  padding: 8px;
+}
+
+body .firstPart .formPart div span {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .firstPart .formPart div .view, body .firstPart .formPart div .view2 {
+  position: relative;
+  left: 370px;
+  bottom: 30px;
+  cursor: pointer;
 }
 
 body .firstPart .formPart div textarea {

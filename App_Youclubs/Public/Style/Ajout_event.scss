@@ -27,11 +27,22 @@ body{
                 margin-bottom: 20px;
                 font-size: 20px;
                 input,textarea{
-                    width: 80%;
+                    width: 400px;
                     background-color: $inputColor;
                     border-radius: 8px;
                     height: 40px;
                     border-style: none;
+                    padding: 8px;
+                }
+                span{
+                    width: 100%;
+                    display: flex;
+                }
+                .view, .view2{
+                    position: relative;
+                    left:370px;
+                    bottom: 30px;
+                    cursor: pointer;
                 }
                 textarea{
                     height: 300px;

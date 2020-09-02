@@ -39,18 +39,18 @@
                }
              }
    
-             if(empty($hashedMdp)){
+             if(empty($mdp)){
                $mdpERROR = "Ce champ ne peut pas être vide";
                $isSuccess = false;
               }
    
-              if(empty($ChashedMdp)){
-               $mdpERROR = "Ce champ ne peut pas être vide";
+              if(empty($Cmdp)){
+               $CmdpERROR = "Ce champ ne peut pas être vide";
                $isSuccess = false;
               }
               else
               {
-                if($hashedMdp != $ChashedMdp)
+                if($mdp != $Cmdp)
                 {
                  $CmdpERROR = "Les mots de passe ne sont pas identiques !";
                  $isSuccess = false;

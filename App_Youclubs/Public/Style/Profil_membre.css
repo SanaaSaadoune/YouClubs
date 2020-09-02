@@ -84,19 +84,6 @@ body .thirdImage {
   float: right;
 }
 
-body form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  clear: both;
-  width: 100%;
-  margin: auto;
-}
-
 body form div {
   width: 400px;
   margin: auto;
@@ -109,6 +96,20 @@ body form div {
           flex-direction: column;
   margin-bottom: 20px;
   font-size: 20px;
+}
+
+body form div span {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body form div .view, body form div .view2 {
+  position: relative;
+  left: 370px;
+  bottom: 30px;
+  cursor: pointer;
 }
 
 body form div input {
@@ -146,4 +147,4 @@ body .retour {
     display: none;
   }
 }
-/*# sourceMappingURL=Profil.css.map */
+/*# sourceMappingURL=Profil_membre.css.map */

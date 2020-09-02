@@ -31,11 +31,7 @@ body{
         float: right;
     }
     form{
-        display: flex;
-        flex-direction: column;;
-        clear: both;
-        width:100%;
-        margin: auto;
+        
         div{
             width: 400px;
             margin: auto;
@@ -43,6 +39,16 @@ body{
             flex-direction: column;
             margin-bottom: 20px;
             font-size: 20px;
+            span{
+                width: 100%;
+                display: flex;
+            }
+            .view, .view2{
+                position: relative;
+                left:370px;
+                bottom: 30px;
+                cursor: pointer;
+            }
             input{
                 width: 100%;
                 background-color: $inputColor;

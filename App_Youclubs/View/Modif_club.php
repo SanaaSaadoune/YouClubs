@@ -36,11 +36,13 @@
             <div>
                 <label for="mdp"> Mot de passe : </label>
                 <input type="password" name="mdp" id="mdp" value="<?php echo $rows->mdp_club ?>">
+                <span><img class="view" src="../Public/Images/view.png" height="20px" width="20px" alt="view"></span>
                 <p style="color:red;"> <?php echo $mdpERROR; ?></p>
             </div>
             <div>
                 <label for="Cmdp"> Confirmation mot de passe : </label>
                 <input type="password" name="Cmdp" id="Cmdp" value="<?php echo $rows->mdp_club ?>">
+                <span><img  class="view2" src="../Public/Images/view.png" height="20px" width="20px" alt="view"></span>
                 <p style="color:red;"> <?php echo $CmdpERROR; ?></p>
             </div>
             <div>
@@ -58,5 +60,31 @@
             <button><img src="../Public/Images/retour.svg" alt="retour" width="40px" height="40px"></button>
         </a>
     </div>
+
+    <script src="../Public/JS/jquery.js"></script>
+    <script type="text/javascript">
+            $(function()
+            {
+                $(".view").on({
+                click: function(){
+                    if('password' == $('#mdp').attr('type')){
+                        $('#mdp').prop('type', 'text');
+                    }else{
+                        $('#mdp').prop('type', 'password');
+                    }
+                }
+            });
+            $(".view2").on({
+                click: function(){
+                    if('password' == $('#Cmdp').attr('type')){
+                        $('#Cmdp').prop('type', 'text');
+                    }else{
+                        $('#Cmdp').prop('type', 'password');
+                    }
+                }
+            });
+            });
+    </script>
+
 </body>
 </html>
