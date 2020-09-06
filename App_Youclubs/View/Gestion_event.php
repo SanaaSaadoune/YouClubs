@@ -38,7 +38,7 @@
         <tbody>
           <tr>
             <th style="vertical-align: middle;"scope="row"> <?php echo $row->id_event ?> </th>
-            <td style="vertical-align: middle;"><img height="100px" width="100px" src='../Public/Images_event/<?php echo $_SESSION['id_club'] ?>/<?php echo $row->photo_event ?>' alt="photo_event"></td>
+            <td style="vertical-align: middle;"><img height="100px" width="100px" src='../Public/Images_event/<?php echo $row->photo_event ?>' alt="photo_event"></td>
             <td style="vertical-align: middle;"><?php echo $row->nom_event ?></td>
             <td style="vertical-align: middle;"><?php echo $row->date_event ?></td>
             <td style="vertical-align: middle;">

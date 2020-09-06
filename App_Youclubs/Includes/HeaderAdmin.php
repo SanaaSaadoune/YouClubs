@@ -6,8 +6,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+              <li class="nav-item active">
                   <a class="nav-link" style="color:white;" href="Dashboard.php"> Gestion des clubs <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" style="color:white;" href="Gestion_membres.php?page=1"> Gestion des membres <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" style="color:white;" href="Gestion_suggest.php"> Gestion des suggestions <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
               <li class="nav-item">

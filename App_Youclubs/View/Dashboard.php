@@ -26,11 +26,11 @@
     <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">Id du club</th>
-            <th scope="col">Nom du club</th>
-            <th scope="col">Email du club</th>
-            <th scope="col" >Modifier le club</th>
-            <th scope="col" >Supprimer le club</th>
+            <th style="text-align: center;" scope="col">Id du club</th>
+            <th style="text-align: center;" scope="col">Nom du club</th>
+            <th style="text-align: center;" scope="col">Email du club</th>
+            <th style="text-align: center;" scope="col" >Modifier le club</th>
+            <th style="text-align: center;"scope="col" >Supprimer le club</th>
           </tr>
         </thead>
         <?php
@@ -38,15 +38,15 @@
         ?>        
         <tbody>
           <tr>
-            <th style="vertical-align: middle;"scope="row"> <?php echo $row->id_club ?> </th>
-            <td style="vertical-align: middle;"><?php echo $row->nom_club ?></td>
-            <td style="vertical-align: middle;"><?php echo $row->email_club ?></td>
-            <td style="vertical-align: middle;">
+            <th style="text-align: center;" scope="row"> <?php echo $row->id_club ?> </th>
+            <td style="text-align: center;"><?php echo $row->nom_club ?></td>
+            <td style="text-align: center;"><?php echo $row->email_club ?></td>
+            <td style="text-align: center;">
                 <a href="Modif_club.php?do=modif&id_club=<?php echo $row->id_club ?>">
                     <button><img src="../Public/Images/modif.svg" width="30px" height="30px" alt="Modifier"></button> 
                 </a>
             </td>
-            <td style="vertical-align: middle;">
+            <td style="text-align: center;">
                 <a href="Supp_club.php?do=supp&id_club=<?php echo $row->id_club ?>">
                     <button><img src="../Public/Images/delete.svg" width="30px" height="30px" alt="Supprimer"></button> 
                 </a>

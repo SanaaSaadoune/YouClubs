@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{3B1EEDF6-90A3-4419-9980-BB28D8D20994}" Label="" LastModificationDate="1598799431" Name="DiagrammeUseCase" Objects="40" Symbols="76" Target="Analyse" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{3B1EEDF6-90A3-4419-9980-BB28D8D20994}" Label="" LastModificationDate="1598799521" Name="DiagrammeUseCase" Objects="40" Symbols="76" Target="Analyse" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -2646,11 +2646,11 @@ LABL 0 Arial,8,N</a:FontList>
 </o:UseCase>
 <o:UseCase Id="o79">
 <a:ObjectID>AFC9A5C7-DD14-4394-83D6-1473AA528975</a:ObjectID>
-<a:Name>Modification du mot de passe</a:Name>
-<a:Code>Modification_du_mot_de_passe</a:Code>
+<a:Name>Modification des informations</a:Name>
+<a:Code>Modification_des_informations</a:Code>
 <a:CreationDate>1598308354</a:CreationDate>
 <a:Creator>admin</a:Creator>
-<a:ModificationDate>1598308363</a:ModificationDate>
+<a:ModificationDate>1598799521</a:ModificationDate>
 <a:Modifier>admin</a:Modifier>
 </o:UseCase>
 <o:UseCase Id="o93">

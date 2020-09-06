@@ -17,7 +17,7 @@ include '../Includes/functions.php';
           $description = checkInput($_POST['description']);
           $photorandom = rand(0,1000000);
 
-          $target = "../Public/Images_event/". $_SESSION['id_club']."/".$photorandom.basename($photo);
+          $target = "../Public/Images_event/".$photorandom.basename($photo);
           $imageExtension  = pathinfo($target,PATHINFO_EXTENSION);
           
           if(empty($nom)){

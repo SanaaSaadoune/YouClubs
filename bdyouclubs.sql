@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  Dim 30 août 2020 à 20:51
+-- Généré le :  Dim 06 sep. 2020 à 17:55
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.3.12
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `club` (
   `mdp_club` varchar(255) NOT NULL,
   PRIMARY KEY (`id_club`),
   UNIQUE KEY `UniqueMail` (`email_club`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `club`
@@ -44,7 +44,9 @@ CREATE TABLE IF NOT EXISTS `club` (
 
 INSERT INTO `club` (`id_club`, `nom_club`, `email_club`, `mdp_club`) VALUES
 (4, 'Events', 'club-events@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
-(5, 'Lecture', 'club-lecture@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
+(5, 'Lecturee', 'club-lecture@gmail.com', '9adcb29710e807607b683f62e555c22dc5659713'),
+(6, 'Sport', 'Sport@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
+(7, 'EventsS', 'club-event@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
 
 -- --------------------------------------------------------
 
@@ -66,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `evenement` (
   `id_club` int(11) NOT NULL,
   PRIMARY KEY (`id_event`),
   KEY `id_club` (`id_club`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `evenement`
@@ -76,7 +78,13 @@ INSERT INTO `evenement` (`id_event`, `nom_event`, `date_event`, `photo_event`, `
 (5, 'Roman le petit prince', '2020-08-14 17:00:00', '608202lecture.jpg', 'chapitre 1', '   C\'était un très bon événement, et c\'était vraiment utile pour tous. On a pu terminé le chapitre 2 de ce roman et on a remarqué que le niveau des apprenants s\'améliore de plus en plus! Premièrement, on a lu ... \r\n   C\'était un très bon événement, et c\'était vraiment utile pour tous. On a pu terminé le chapitre 2 de ce roman et on a remarqué que le niveau des apprenants s\'améliore de plus en plus! Premièrement, on a lu ... \r\n   C\'était un très bon événement, et c\'était vraiment utile pour tous. On a pu terminé le chapitre 2 de ce roman et on a remarqué que le niveau des apprenants s\'améliore de plus en plus! Premièrement, on a lu ... \r\n   C\'était un très bon événement, et c\'était vraiment utile pour tous. On a pu terminé le chapitre 2 de ce roman et on a remarqué que le niveau des apprenants s\'améliore de plus en plus! Premièrement, on a lu ... ', 1, 0, NULL, 1),
 (2, 'New year\'s revolution', '2020-12-30 17:30:00', '396573event.jpg', 'NEW YEAR NEW ME', NULL, 0, 0, NULL, 2),
 (3, 'YOUSCAPE', '2020-08-22 18:50:00', '874314youscape.jpg', 'STAY TUNED', 'C\'était vraiment un bon evenement ! premièrement on a fait touuuuuut deuxiement et finalement on cloturé cet evenement par donner des cadeaux aux gagnants. C\'était vraiment un bon evenement ,C\'était vraiment un bon evenement , C\'était vraiment un bon evenement , vC\'était vraiment un bon evenement, C\'était vraiment un bon evenement , C\'était vraiment un bon evenement , C\'était vraiment un bon evenement , C\'était vraiment un bon evenement  C\'était vraiment un bon evenement , C\'était vraiment un bon evenement , C\'était vraiment un bon evenement , C\'était vraiment un bon evenement , C\'était vraiment un bon evenement , C\'était vraiment un bon evenement , C\'était vraiment un bon evenement ,C\'était vraiment un bon evenement', 1, 0, NULL, 2),
-(4, 'Youcode talents', '2019-01-10 17:30:00', '858808halsey.jpg', 'DECOUVERONS NOS TALENTS', 'C\'était vraiment un bon evenement ?C\'était vraiment un bon evenement ,C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement OK!! ;)', 1, 0, NULL, 2);
+(4, 'Youcode talents', '2019-01-10 17:30:00', '858808halsey.jpg', 'DECOUVERONS NOS TALENTS', 'C\'était vraiment un bon evenement ?C\'était vraiment un bon evenement ,C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement C\'était vraiment un bon evenement OK!! ;)', 1, 0, NULL, 2),
+(7, 'Roman le petit chaperon rouge', '2020-08-08 15:13:00', '71558lect.jpg', 'Chapitre 1', NULL, 0, 0, NULL, 5),
+(8, 'hh', '2020-09-25 23:22:00', '862742Billie2.jpg', 'LJHJNGLINGV', NULL, 0, 0, NULL, 4),
+(9, 'New year\'s revolution', '2020-09-25 12:38:00', '94320Billie2.jpg', 'STAY TUNED', NULL, 0, 0, NULL, 7),
+(10, 'Events', '2020-09-23 07:51:00', '806294event.jpg', 'HELO', NULL, 0, 0, NULL, 7),
+(11, 'New year\'s revolution', '2020-09-27 17:40:00', '189427event.jpg', 'HELLO', NULL, 0, 0, NULL, 7),
+(12, 'New year\'s revolution', '2020-10-03 06:44:00', '266751event.jpg', 'OK', NULL, 0, 0, NULL, 7);
 
 -- --------------------------------------------------------
 
@@ -92,17 +100,37 @@ CREATE TABLE IF NOT EXISTS `membre` (
   `email_membre` varchar(255) NOT NULL,
   `mdp_membre` varchar(255) NOT NULL,
   `adminYC` tinyint(1) NOT NULL DEFAULT '0',
+  `date_insc` date NOT NULL,
   PRIMARY KEY (`id_membre`),
   UNIQUE KEY `UniqueMail` (`email_membre`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `membre`
 --
 
-INSERT INTO `membre` (`id_membre`, `nom_membre`, `prenom_membre`, `email_membre`, `mdp_membre`, `adminYC`) VALUES
-(1, 'Saadoune', 'Sanaa', 'Sanaa@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 0),
-(3, 'Admin', 'Admin', 'admin1@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1);
+INSERT INTO `membre` (`id_membre`, `nom_membre`, `prenom_membre`, `email_membre`, `mdp_membre`, `adminYC`, `date_insc`) VALUES
+(1, 'Saadoune', 'Sanaa', 'Sanaa@gmail.com', '8929b61a0e6b985943edc6d13c9992dc661e4f09', 0, '2020-09-01'),
+(3, 'Admin', 'Admin', 'admin1@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, '2020-09-02'),
+(4, 'A', 'A', 'AA@gmail.com', '123', 0, '2020-09-04'),
+(5, 'B', 'B', 'BB@gmail.com', '123', 0, '0000-00-00'),
+(6, 'C', 'C', 'CC@gmail.com', '123', 0, '0000-00-00'),
+(7, 'D', 'D', 'DD@gmail.com', '123', 0, '0000-00-00'),
+(8, 'E', 'E', 'EE@gmail.com', '123', 0, '0000-00-00'),
+(9, 'F', 'F', 'FF@gmail.com', '123', 0, '0000-00-00'),
+(10, 'H', 'H', 'HH@gmail.com', '123', 0, '0000-00-00'),
+(11, 'M', 'M', 'MM@gmail.com', '123', 0, '0000-00-00'),
+(13, 'OO', 'OO', 'OO@gmail.com', '123', 0, '0000-00-00'),
+(14, 'PP', 'PP', 'PP@gmail.com', '123', 0, '0000-00-00'),
+(15, 'KK', 'KK', 'KK@gmail.com', '123', 0, '0000-00-00'),
+(16, 'll', 'll', 'll@gmaiL.com', '123', 0, '0000-00-00'),
+(17, 'YY', 'YY', 'YY@gmail.com', '123', 0, '0000-00-00'),
+(18, 'VV', 'VV', 'VV@gmail.com', '123', 0, '0000-00-00'),
+(19, 'WW', 'WW', 'WW@gmail.com', '123', 0, '0000-00-00'),
+(20, 'HH', 'HH', 'HHH@gmail.com', '123', 0, '0000-00-00'),
+(21, 'QQ', 'QQ', 'qq@gmail.com', '123', 0, '0000-00-00'),
+(22, 'XX', 'XX', 'XX@gmail.com', '123', 0, '0000-00-00'),
+(23, 'JJ', 'JJ', 'JJ@gmail.com', '123', 0, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -171,7 +199,7 @@ CREATE TABLE IF NOT EXISTS `suggestion` (
   PRIMARY KEY (`id_suggest`),
   KEY `id_membre` (`id_membre`),
   KEY `id_club` (`id_club`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

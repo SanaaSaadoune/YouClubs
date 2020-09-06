@@ -134,6 +134,10 @@ body .table {
   border: 1px solid black;
 }
 
+body .table td {
+  text-align: center;
+}
+
 body .table div {
   width: 40px;
   display: -webkit-box;

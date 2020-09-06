@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{DAA6115B-9BA2-464C-9AE4-F401815B711C}" Label="" LastModificationDate="1598872916" Name="Diagramme de séquence UML_1" Objects="12" Symbols="16" Target="Analyse" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{DAA6115B-9BA2-464C-9AE4-F401815B711C}" Label="" LastModificationDate="1598875507" Name="Diagramme de séquence UML_1" Objects="12" Symbols="16" Target="Analyse" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -967,11 +967,11 @@ NameToCode=No</a:ModelOptionsText>
 <c:SequenceDiagrams>
 <o:SequenceDiagram Id="o4">
 <a:ObjectID>ECEC8F92-D1D8-4A47-A520-6F1EDFA5387E</a:ObjectID>
-<a:Name>DiagrammeSequence_1</a:Name>
-<a:Code>DiagrammeSequence_1</a:Code>
+<a:Name>Ajout d&#39;un évènement</a:Name>
+<a:Code>Ajout_d_un_evenement</a:Code>
 <a:CreationDate>1598871577</a:CreationDate>
 <a:Creator>admin</a:Creator>
-<a:ModificationDate>1598872873</a:ModificationDate>
+<a:ModificationDate>1598875507</a:ModificationDate>
 <a:Modifier>admin</a:Modifier>
 <a:DisplayPreferences>[DisplayPreferences]
 
@@ -1352,8 +1352,8 @@ Shadow=0</a:DisplayPreferences>
 <a:PaperSource>15</a:PaperSource>
 <c:Symbols>
 <o:InteractionSymbol Id="o5">
-<a:ModificationDate>1598872916</a:ModificationDate>
-<a:Rect>((-15397,-19500), (22885,16500))</a:Rect>
+<a:ModificationDate>1598875475</a:ModificationDate>
+<a:Rect>((-15397,-13186), (22305,16500))</a:Rect>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
 <a:BaseSymbol.Flags>4</a:BaseSymbol.Flags>
 <a:LineColor>15257808</a:LineColor>
@@ -1444,9 +1444,9 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <c:SlaveSubSymbols>
 <o:LifelineSymbol Id="o14">
-<a:ModificationDate>1598872251</a:ModificationDate>
-<a:Rect>((-12075,-13200), (-11975,9975))</a:Rect>
-<a:ListOfPoints>((-12075,9975),(-12075,-13200))</a:ListOfPoints>
+<a:ModificationDate>1598875475</a:ModificationDate>
+<a:Rect>((-12075,-13186), (-11975,9975))</a:Rect>
+<a:ListOfPoints>((-12075,9975),(-12075,-13186))</a:ListOfPoints>
 <a:ArrowStyle>0</a:ArrowStyle>
 <a:LineColor>16744448</a:LineColor>
 <a:DashStyle>3</a:DashStyle>
@@ -1472,9 +1472,9 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <c:SlaveSubSymbols>
 <o:LifelineSymbol Id="o16">
-<a:ModificationDate>1598872855</a:ModificationDate>
-<a:Rect>((9599,-13200), (9699,9975))</a:Rect>
-<a:ListOfPoints>((9599,9975),(9599,-13200))</a:ListOfPoints>
+<a:ModificationDate>1598875475</a:ModificationDate>
+<a:Rect>((9599,-13186), (9699,9975))</a:Rect>
+<a:ListOfPoints>((9599,9975),(9599,-13186))</a:ListOfPoints>
 <a:ArrowStyle>0</a:ArrowStyle>
 <a:LineColor>16744448</a:LineColor>
 <a:DashStyle>3</a:DashStyle>
