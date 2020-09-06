@@ -36,31 +36,24 @@
         <div class="space"></div>
         <div class="infosEvent">
             <div class="leftPart">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner" >
-                            <div class="carousel-item active" style="height:500px;width:400px;">
-                                <img src="../Public/Images_event/<?php echo $_SESSION["id_club"] ?>/<?php echo $row->photo_event ?>" class="d-block w-100"  alt="...">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <?php $n = 0;
+                        foreach ($row2 as $r) { ?>
+                            <div class="carousel-item <?php if($n == 0){echo 'active';}  ?>">
+                                <div  style="background-image: url('../Public/Images_event/<?php echo $r->src_photo ?>'); width: 100%; height: 500px;background-position: center;background-size: cover;"></div>
                             </div>
-                            <?php foreach ($row2 as $r) { ?>
-                            <div class="carousel-item" style="height:500px;width:400px;">
-                                <img src="../Public/Images_event/<?php echo $_SESSION["id_club"] ?>/<?php echo $r->src_photo ?>"  class="d-block w-100" alt="...">
-                            </div>
-                        <?php } ?>
+                        <?php $n++; } ?>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon"  style="background-color:black;" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" style="background-color:black;" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
                     </a>
-                </div>  
+                </div>
             </div>
             <div class="rightPart">
                 <h5> Date : <span> <?php echo $row->date_event ?> </span> </h5>
@@ -71,6 +64,11 @@
         </div>
     </section>
     <div class="space"></div>
+    <div class="retour">
+        <a href="Evenements.php">
+            <button style="border:none; background-color:white;"><img src="../Public/Images/retour.svg" alt="retour" width="40px" height="40px"></button>
+        </a>
+    </div>
     <?php
       include '../Includes/Footer.php';
     ?>

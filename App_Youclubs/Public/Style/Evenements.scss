@@ -218,16 +218,14 @@ body{
 
 
 @media only screen and (max-width: 1300px){
+    body{
+    h2{
+        font-size: 4vw;
+    }
     .Description_page{
         flex-direction: column;
         .image1{
-            height: 300px;
-            width: 200px;
-            float: none;
-            margin-left: 0px;
-            width: 90%;
-            margin: auto;
-            margin-top: 40px;
+            display: none;
         }
         .image2{
             height: 300px;
@@ -244,7 +242,14 @@ body{
             margin: auto;
             .triAll{
                 flex-direction: column;
+                select{
+                    font-size: 18px;
+                    width: 140px;
+                    margin-left: 30px;
+                    text-align: center;
+                }
             }
+            
         }
     }
-}
+}}

@@ -372,22 +372,19 @@ body .Part_event .evenements .evenement .infosEvent button:hover {
 }
 
 @media only screen and (max-width: 1300px) {
-  .Description_page {
+  body h2 {
+    font-size: 4vw;
+  }
+  body .Description_page {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .Description_page .image1 {
-    height: 300px;
-    width: 200px;
-    float: none;
-    margin-left: 0px;
-    width: 90%;
-    margin: auto;
-    margin-top: 40px;
+  body .Description_page .image1 {
+    display: none;
   }
-  .Description_page .image2 {
+  body .Description_page .image2 {
     height: 300px;
     width: 200px;
     float: none;
@@ -395,15 +392,21 @@ body .Part_event .evenements .evenement .infosEvent button:hover {
     margin: auto;
     margin-top: 60px;
   }
-  .Part_event .tri {
+  body .Part_event .tri {
     width: 86%;
     margin: auto;
   }
-  .Part_event .tri .triAll {
+  body .Part_event .tri .triAll {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  body .Part_event .tri .triAll select {
+    font-size: 18px;
+    width: 140px;
+    margin-left: 30px;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=Evenements.css.map */

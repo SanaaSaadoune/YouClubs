@@ -59,7 +59,7 @@
                 foreach ($rows as $row) {
             ?>
             <div class="evenement">
-                <div class="photoEvent" style="background-image: url('../Public/Images_event/<?php echo $row->id_club ?>/<?php echo $row->photo_event ?>');">  </div>
+                <div class="photoEvent" style="background-image: url('../Public/Images_event/<?php echo $row->photo_event ?>'); background-position: center;background-size: cover;">  </div>
                 <div class="infosEvent"> 
                     <h5> <?php echo $row->date_event ?> </h5>
                     <p> <?php echo $row->nom_event ?></p>

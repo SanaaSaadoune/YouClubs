@@ -20,7 +20,7 @@
     <div class="space"> </div>
     <div class="Image1"><img src="../Public/Images/membres.svg" alt="photo" width="400px" height="300px"> </div>
     <h2> Gestion des membres </h2>
-    <div class="space"> </div>
+    <br>
     <form method="POST">
        <div class="searchDiv">
         <div class="triAll">

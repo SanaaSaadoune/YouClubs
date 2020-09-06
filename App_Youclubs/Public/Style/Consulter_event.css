@@ -296,26 +296,36 @@ body .Part_event .infosEvent .rightPart h5 {
 }
 
 body .Part_event .infosEvent .rightPart p {
+  padding: 15px;
   background-color: #fafafa;
 }
 
 @media only screen and (max-width: 1300px) {
-  .Description_page {
+  body h2 {
+    font-size: 4vw;
+  }
+  body .Part_event .infosEvent {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .Description_page .image1 {
-    height: 300px;
-    width: 200px;
-    float: none;
-    margin-left: 0px;
-    width: 90%;
-    margin: auto;
-    margin-top: 40px;
+  body .Part_event .infosEvent .rightPart {
+    width: 100%;
   }
-  .Description_page .image2 {
+  body .Part_event .infosEvent .rightPart h5 {
+    margin-top: 10px;
+  }
+  body .Description_page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .Description_page .image1 {
+    display: none;
+  }
+  body .Description_page .image2 {
     height: 300px;
     width: 200px;
     float: none;

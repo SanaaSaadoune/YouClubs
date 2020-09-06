@@ -65,5 +65,40 @@ body{
 
 @media only screen and (max-width:1300px)
 {
-   
+    body{
+        h2{
+            font-size: 3vw;
+        }
+        .searchDiv{
+        .triAll{
+                width: 190px;
+            input{
+                width: 150px;
+                font-size: 1.5vw;
+                }
+            }
+        }
+        table{       
+            font-size:1.5vw;
+        }
+        button{
+            img{
+                width: 18px;
+                height: 18px;
+            }
+        }
+        .divAdd{
+            .btnAdd{
+                width: 140px;
+                font-size: 1.5vh;
+                img{
+                    width: 13px;
+                    height: 13px;
+                }
+            }
+            .pagination{
+                font-size: 1.5vw;
+            }
+        }
+    }
 }

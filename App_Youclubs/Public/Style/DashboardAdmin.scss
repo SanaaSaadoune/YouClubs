@@ -9,6 +9,9 @@ $inputColor : #E8EFF6;
     font-family: $font;
 }
 body{
+    h2{
+        font-size: 3vw;
+    }
     .searchDiv{
         width: 80%;
         margin: auto;
@@ -28,6 +31,7 @@ body{
             }
         }
     }
+
   .buttons{
     width:140px;
     margin: auto;
@@ -50,5 +54,37 @@ body{
 }
 @media only screen and (max-width:1300px)
 {
-   
+    body{
+        .searchDiv{
+        .triAll{
+                width: 190px;
+            input{
+                width: 150px;
+                font-size: 1.5vw;
+                }
+            }
+        }
+        table{       
+            font-size:1.5vw;
+        }
+        button{
+            img{
+                width: 18px;
+                height: 18px;
+            }
+        }
+        .divAdd{
+            .btnAdd{
+                width: 140px;
+                font-size: 1.5vh;
+                img{
+                    width: 13px;
+                    height: 13px;
+                }
+            }
+            .pagination{
+                font-size: 1.5vw;
+            }
+        }
+    }
 }

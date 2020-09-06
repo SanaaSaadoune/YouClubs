@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../Public/Style/Dashboard.css">
+    <link rel="stylesheet" href="../Public/Style/DashboardAdmin.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -21,8 +21,7 @@
     ?>
     <div class="space"> </div>
     <div class="Image1"><img src="../Public/Images/managment.svg" alt="photo" width="400px" height="300px"> </div>
-    <h2> Gestion des clubs </h2>
-    <div class="space"> </div>
+    <h2> Gestion des clubs </h2><br>
     <table class="table table-hover">
         <thead>
           <tr>
@@ -57,7 +56,7 @@
       </table>
       <div class="divAdd">
           <a href="Ajout_club">
-            <button class="btnAdd"> <img src="../Public/Images/plus.png" alt="add" width="20px" height="20px"> Ajouter un club </button>
+          <button class="btnAdd"> <img src="../Public/Images/plus.png" alt="add" width="20px" height="20px"> Ajouter un club </button>
           </a>
       </div>
       <div class="space"> </div>

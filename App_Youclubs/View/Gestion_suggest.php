@@ -20,7 +20,7 @@
     <div class="space"> </div>
     <div class="Image1"><img src="../Public/Images/suggestions.svg" alt="photo" width="400px" height="300px"> </div>
     <h2> Gestion des suggestions </h2>
-    <div class="space"> </div>
+    <br>
 
     <table class="table table-hover">
         <thead>

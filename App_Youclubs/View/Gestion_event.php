@@ -20,7 +20,7 @@
     <div class="space"></div>
     <div class="Image1"><img src="../Public/Images/Tab_img.svg" alt="photo" width="400px" height="300px"> </div>
     <h2> Les événements à venir </h2>
-    <div class="space"></div>
+    <br>
     <table class="table table-hover">
         <thead>
           <tr>
