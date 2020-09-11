@@ -10,7 +10,7 @@
                   <a class="nav-link" style="color:white;" href="Home.php">Accueil </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" style="color: white;" href="Evenements.php">Evénemets</a>
+                  <a class="nav-link" style="color: white;" href="Evenements.php">Evénements</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" style="color: white;" href="Forum.php">Forum</a>
