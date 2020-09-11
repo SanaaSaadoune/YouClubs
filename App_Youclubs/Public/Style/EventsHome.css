@@ -335,14 +335,15 @@ body .Part_event .evenements .evenement .photoEvent {
 
 body .Part_event .evenements .evenement .infosEvent {
   background-color: #FCFCFC;
-  height: 30%;
+  height: 35%;
   padding: 8px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body .Part_event .evenements .evenement .infosEvent p {
-  overflow-y: hidden;
+  height: 100%;
+  overflow-y: auto;
   text-align: center;
   font-weight: bold;
   font-size: 20px;
@@ -358,28 +359,7 @@ body .Part_event .evenements .evenement .infosEvent h5 {
   text-align: center;
 }
 
-body .Part_event .evenements .evenement button {
-  width: 150px;
-  margin: auto;
-  height: 40px;
-  background-color: #038DFE;
-  color: white;
-  border-radius: 10px;
-  border-style: none;
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
-body .Part_event .evenements .evenement button:hover {
-  cursor: pointer;
-  background-color: #bdbdbd;
-  color: #038DFE;
-}
-
 @media only screen and (max-width: 1300px) {
-  body .container .row .col-sm h1 {
-    font-size: 4vw;
-  }
   body h2 {
     font-size: 4vw;
   }
@@ -417,4 +397,4 @@ body .Part_event .evenements .evenement button:hover {
     text-align: center;
   }
 }
-/*# sourceMappingURL=Home_event.css.map */
+/*# sourceMappingURL=EventsHome.css.map */

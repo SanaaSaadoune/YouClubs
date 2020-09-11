@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../Public/Style/Home.css">
-  <link rel="stylesheet" href="../Public/Style/Home_event.css">
+  <link rel="stylesheet" href="../Public/Style/Home_events.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -65,31 +65,16 @@
                     foreach ($rows4 as $row) {
                 ?>
                 <div class="evenement">
-                    <div class="photoEvent" style="background-image: url('../Public/Images_event/<?php echo $row->photo_event ?>');">  </div>
-                    
+                    <div class="photoEvent" style="background-image: url('../Public/Images_event/<?php echo $row->photo_event ?>');">
+                  
+                  </div>
+                     
+                  <p id="desc"> <?php echo $row->description_event ?></p>
                     <div class="infosEvent"> 
                         <h5> <?php echo $row->date_event ?> </h5>
-                        <p> <?php echo $row->nom_event ?><br> <span>~Club <?php echo $row->nom_club ?></span></p>
+                        <p> <?php echo $row->nom_event ?><br> <span>~Club <?php echo $row->nom_club?></span></p>
+                        <?php $_SESSION['desc']= $row->description_event ?>
                     </div>
-                    <button data-filter="*" data-toggle="modal" data-target="#addProductModal" > Plus d'infos </button>
-                    <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLongTitle">Description</h5>
-                              </div>
-                              <div class="modal-body">
-                                      <div class="form-group d-flex flex-column">
-                                          <label for="addCategorie" class="col-form-label"> <?php echo $row->description_event ?></label>
-                                      </div>  
-                                      <div class="modal-footer">
-                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                      </div>
-                              </div>
-                            
-                          </div>
-                      </div>
-                  </div>
                     
                 </div>
                 <?php } ?>

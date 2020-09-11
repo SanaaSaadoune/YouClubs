@@ -168,13 +168,31 @@ body{
                 border-radius: 5px;
                 box-shadow: 2px 3px 5px rgba(136, 139, 139, 0.884);
                 border-color: white;
+                #desc{
+                        position: absolute;
+                        color:black;
+                        font-weight:bold;
+                        font-size:20px;
+                        width: 390px;
+                        margin-top: 20px;
+                        visibility: hidden;
+                    }
                 .photoEvent{
                     height: 65%;
                     width: 100%;
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
+                    &:hover{
+                        opacity: 0.2;
+                        background-color: black;
+                    }
+                    &:hover + #desc{
+                        visibility: visible;  
+                   }
+                    
                 }
+                
                 .infosEvent{
                     background-color: #FCFCFC;
                     height: 30%;
