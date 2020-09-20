@@ -7,6 +7,7 @@
     header("Location:../View/LoginTest.php");
     
     }else{
+        //Informations du membre connecté
         $stmt = $db->prepare("SELECT * FROM membre where id_membre = ?");
         $stmt->execute(array($_SESSION['id_membre']));
         $row = $stmt->fetch();

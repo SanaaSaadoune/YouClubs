@@ -11,8 +11,9 @@ include '../Includes/functions.php';
     if( $_SESSION["admin"] == null){
        header("Location:../View/LoginTest.php");
     }else{
+        //Ajouter un club
         if(isset($_POST['Ajouter'])){
-
+          //Vérifier les champs
           $nom = checkInput($_POST['nom']);
           $email  = checkInput($_POST['email']);
           $mdp = checkInput($_POST['mdp']);

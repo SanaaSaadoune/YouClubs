@@ -8,6 +8,7 @@
         $do = isset($_GET['do']) ? $_GET['do'] : 'manage';
         if ($do == 'manage') 
         {
+            //Afficher les evenements non clôturés du club connecté
             $stmt = $db->prepare("SELECT * FROM evenement WHERE cloture=0 and id_club = ?");
             $stmt->execute(array($_SESSION['id_club']));
             $rows = $stmt->fetchAll();

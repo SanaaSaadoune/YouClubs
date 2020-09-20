@@ -17,9 +17,11 @@ include '../Includes/functions.php';
           $description = checkInput($_POST['description']);
           $photorandom = rand(0,1000000);
 
+          //Chemin de l'enregistrement des photos
           $target = "../Public/Images_event/".$photorandom.basename($photo);
           $imageExtension  = pathinfo($target,PATHINFO_EXTENSION);
           
+          //Vérifier si les champs ne sont pas null
           if(empty($nom)){
            $nomERROR = "Ce champ ne peut pas être vide";
            $isSuccess = false;
@@ -32,10 +34,12 @@ include '../Includes/functions.php';
            $photoERROR = "Ce champ ne peut pas être vide";
            $isSuccess = false;
           }
+          //Vérifier l'extension des images
           if($imageExtension != "jpg" && $imageExtension != "png" && $imageExtension != "jpeg" && $imageExtension != "gif"){
               $photoERROR = "Les fichiers autorisés sont : .jpg, .jpng , .png , .gif";
               $isSuccess = false;   
           }
+          //Vérifier le size des images
           if($_FILES["photo"]["size"] > 1000000){ 
               $photoERROR = "Le fichier ne doit pas dépasser le 500KB";
               $isSuccess = false;

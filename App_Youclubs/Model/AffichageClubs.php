@@ -8,6 +8,7 @@
         $do = isset($_GET['do']) ? $_GET['do'] : 'manage';
         if ($do == 'manage') 
         {
+            //Affichage des clubs
             $stmt = $db->prepare("SELECT * FROM club");
             $stmt->execute(array());
             $rows = $stmt->fetchAll();

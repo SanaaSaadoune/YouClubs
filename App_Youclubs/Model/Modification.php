@@ -6,7 +6,7 @@
     $id_event    = $nom = $photo = $description = $date  = $nomERROR = $dateERROR = $photoERROR  = $descriptionERROR = "";
     $isSuccess  = $status = $ChangeImage = true;
     $Success ="";
-    $id_event = isset($_GET['id_event']) && is_numeric($_GET['id_event']) ? intval($_GET['id_event']) : 0;
+    $id_event = isset($_GET['id_event']);
 
     if( $_SESSION["club"] == null){
         header("Location:../View/LoginTest.php");
@@ -25,9 +25,12 @@
             $nom = checkInput($_POST['nom']);
             $date  = checkInput($_POST['date']);
             $photo = checkInput($_FILES['photo']['name']);
-            $description = checkInput($_POST['description']);
+            $description = checkInput($_POST['description']);     
+            //Chemin de l'enregistrement des photos
             $target = "../Public/Images_event/". $_SESSION['id_club']."/".basename($photo);
             $imageExtension  = pathinfo($target,PATHINFO_EXTENSION);
+
+            //Vérifier si les champs ne sont pas null
             if(empty($nom)){
                     $nomERROR = "Ce champ ne peut pas être vide";
                     $isSuccess = false;
@@ -40,10 +43,15 @@
                 $photoERROR = "Ce champ ne peut pas être vide";
                 $ChangeImage = false;
             }
+
+            //Vérifier l'extension des images
             if($imageExtension != "jpg" && $imageExtension != "png" && $imageExtension != "jpeg" && $imageExtension != "gif"){
                         $photoERROR = "Les fichiers autorisés sont : .jpg, .jpng , .png , .gif";
                         $isSuccess = false;   
             }
+
+            
+            //Vérifier le size des images
             if($_FILES["photo"]["size"] > 1000000){ 
                         $photoERROR = "Le fichier ne doit pas dépasser le 500KB";
                         $isSuccess = false;
@@ -55,25 +63,25 @@
             }
             
              
-        if($isSuccess && $ChangeImage){
-            $status = false;
-            move_uploaded_file($_FILES['photo']['tmp_name'],$target);  
-            $stmt = $db->prepare("UPDATE evenement SET nom_event = ?,  date_event = ? , photo_event = ? , description_event=? WHERE id_event= ?");
-            $stmt->execute(array($nom, $date, $photo,$description,$id_event));
+            if($isSuccess && $ChangeImage){
+                $status = false;
+                move_uploaded_file($_FILES['photo']['tmp_name'],$target);  
+                $stmt = $db->prepare("UPDATE evenement SET nom_event = ?,  date_event = ? , photo_event = ? , description_event=? WHERE id_event= ?");
+                $stmt->execute(array($nom, $date, $photo,$description,$id_event));
 
-            $Success ="<br> <br> <div class='alert alert-success' role='alert'> Evénement bien ajouté ! </div>" .
-             header('refresh:2;url=../View/Gestion_event.php');
-        }
-        else{
-            $status = false;
-            move_uploaded_file($_FILES['photo']['tmp_name'],$target);  
-            $stmt = $db->prepare("UPDATE evenement SET nom_event = ?,  date_event = ? , description_event=? WHERE id_event= ?");
-            $stmt->execute(array($nom, $date,$description,$id_event));
+                $Success ="<br> <br> <div class='alert alert-success' role='alert'> Evénement bien modifié ! </div>" .
+                header('refresh:2;url=../View/Gestion_event.php');
+            }
+            else{
+                $status = false;
+                move_uploaded_file($_FILES['photo']['tmp_name'],$target);  
+                $stmt = $db->prepare("UPDATE evenement SET nom_event = ?,  date_event = ? , description_event=? WHERE id_event= ?");
+                $stmt->execute(array($nom, $date,$description,$id_event));
 
-            $Success ="<br> <br> <div class='alert alert-success' role='alert'> Evénement bien modifié ! </div>" .
-             header('refresh:2;url=../View/Gestion_event.php');
+                $Success ="<br> <br> <div class='alert alert-success' role='alert'> Evénement bien modifié ! </div>" .
+                header('refresh:2;url=../View/Gestion_event.php');
+            }
         }
-    }
 
 
     if(isset($_POST['Supprimer']))

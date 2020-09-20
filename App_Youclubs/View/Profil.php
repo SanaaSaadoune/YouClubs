@@ -56,13 +56,7 @@
         </div>         
     </form>
     <img src="../Public/Images/gauche.svg" class="thirdImage">
-    <div class="retour">
-        <a href="Accueil.php">
-            <button><img src="../Public/Images/retour.svg" alt="retour"  width="40px" height="40px"></button>
-        </a>
-    </div>
     
-
         
     <script src="../Public/JS/jquery.js"></script>
     <script type="text/javascript">

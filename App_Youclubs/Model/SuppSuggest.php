@@ -5,7 +5,7 @@
     
     $id_suggest  = "";
     $Success ="";
-    $id_suggest = isset($_GET['id_suggest']) && is_numeric($_GET['id_suggest']) ? intval($_GET['id_suggest']) : 0;
+    $id_suggest = isset($_GET['id_suggest']);
 
     $stmt = $db->prepare("SELECT * FROM suggestion , membre WHERE membre.id_membre = suggestion.id_membre AND id_suggest = ? LIMIT 1");
     $stmt->execute(array($id_suggest));

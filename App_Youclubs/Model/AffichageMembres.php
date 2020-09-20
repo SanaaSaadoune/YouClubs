@@ -20,8 +20,9 @@
         $result = $query->fetch();
         $nbMembres = $result->nb_membres;
 
-        // On détermine le nombre de membres par page
+        // On détermine le nombre de membres par page 
         $parPage = 10;
+        // la fonction ceil retourne l'entier supérieur du nombre.
         $pages = ceil($nbMembres / $parPage);
 
         // Affichage de la page selon le premier membre
@@ -33,6 +34,7 @@
         $query->execute();
         $membres = $query->fetchAll();
 
+        //Rechercher membre par son nom ou prénom
         if(isset($_POST['Search']))
         {
             $nom = $_POST['nom'];
@@ -49,17 +51,5 @@
                 }
             }
         }
-
-
-        // $numPage = 1;
-        // $nbrMembres = count($rows);
-        // for($i=0; $i<=$nbrMembres; $i++)
-        // {
-        //     if($nbrMembres > 10)
-        //     {
-        //         $numPage ++;
-        //         $nbrMembres = $nbrMembres-10;
-        //     }
-        // }
-        }
+    }
     

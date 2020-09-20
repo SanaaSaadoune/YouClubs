@@ -5,7 +5,7 @@
     if( $_SESSION["admin"] == null){
     header("Location:../View/LoginTest.php");
     }else{
-    
+        //Page courante = 1 par défaut
         if(isset($_GET['page']) && !empty($_GET['page'])){
             $pageCourante = (int) strip_tags($_GET['page']);
         }else{

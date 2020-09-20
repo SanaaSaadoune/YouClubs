@@ -23,7 +23,7 @@ session_start();
             $suggestions = $stmt->fetchAll();
         }
 
-        
+        //Ajout suggestion par membre
         if(isset($_POST['AjoutSuggest']))
         {
             $clubSuggest = $_POST['select2'];
@@ -34,7 +34,6 @@ session_start();
                 header('refresh:2;url=../View/Forum.php');
                 $isSuccess = false;
                }
-
 
             if($isSuccess){
                 $status = false; 
@@ -51,14 +50,15 @@ session_start();
             }
         }
 
+
+        //Affichage des suggestions pour chaque membre
         $req2 = $db->prepare("SELECT * FROM suggestion WHERE id_membre = ? ");
         $req2->execute(array($_SESSION['id_membre']));
         $mesSuggestions = $req2->fetchAll();
 
 
-        //Supprimer ma suggestion
-
-        $id_suggest = isset($_GET['id_suggest']) && is_numeric($_GET['id_suggest']) ? intval($_GET['id_suggest']) : 0;
+        //Supprimer la suggestion par le membre
+        $id_suggest = isset($_GET['id_suggest']);
 
         if(isset($_POST['Supprimer']))
         {  

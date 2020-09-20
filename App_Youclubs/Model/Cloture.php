@@ -5,7 +5,7 @@
     $id_event    = $article = $photo1 = $photo2 = $photo3  = $photo4 = $photoERROR  = $articleERROR = "";
     $isSuccess  = $status = true;
     $Success ="";
-    $id_event = isset($_GET['id_event']) && is_numeric($_GET['id_event']) ? intval($_GET['id_event']) : 0;
+    $id_event = isset($_GET['id_event']);
 
     if( $_SESSION["club"] == null){
         header("Location:../View/LoginTest.php");
@@ -18,7 +18,7 @@
         $stmt->execute(array($id_event));
         $row = $stmt->fetch();
     }
-    
+    //Cloturer un evenement
     if(isset($_POST['Cloturer']))
         {
             $stmt2 = $db->prepare("SELECT  nom_event, date_event FROM evenement WHERE id_event = ? LIMIT 1");
@@ -33,6 +33,7 @@
             $photo3 = checkInput($_FILES['photo3']['name']);
             $photo4 = checkInput($_FILES['photo4']['name']);
 
+            //Définir le nom et le chemin du photo
             $photorandom1 = rand(0,1000000);
             $target1 = "../Public/Images_event/".$photorandom1.basename($photo1);
             $photorandom2 = rand(0,1000000);
@@ -52,6 +53,7 @@
                 $photoERROR = "Veuillez ajouter 4 images!";
                 $isSuccess = false;
             }
+            //Verifier l'extension et le size du photo
             else if(!checkExtension($photo1,$target1) || !checkExtension($photo2,$target2) || !checkExtension($photo3,$target3) || !checkExtension($photo4,$target4) )
             {
                 $photoERROR = "Les fichiers autorisés sont : .jpg, .jpng , .png , .gif";

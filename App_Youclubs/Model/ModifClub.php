@@ -11,7 +11,7 @@ include '../Includes/functions.php';
         $Success ="";
         $isSuccess  =  true;
 
-        $id_club = isset($_GET['id_club']) && is_numeric($_GET['id_club']) ? intval($_GET['id_club']) : 0;
+        $id_club = isset($_GET['id_club']);
   
         $stmt = $db->prepare("SELECT * FROM club WHERE id_club= ?");
         $stmt->execute(array($id_club));
@@ -26,7 +26,7 @@ include '../Includes/functions.php';
           $Cmdp = checkInput($_POST['Cmdp']);
           $ChashedMdp = sha1($Cmdp);
 
-          
+          //Verification des champs
           if(empty($nom)){
             $nomERROR = "Ce champ ne peut pas être vide";
             $isSuccess = false;
@@ -41,7 +41,7 @@ include '../Includes/functions.php';
                $isSuccess = false;
              }
            }
- 
+           //Email doit être unique
            if(empty($email)){
             $emailERROR = "Ce champ ne peut pas être vide";
             $isSuccess = false;

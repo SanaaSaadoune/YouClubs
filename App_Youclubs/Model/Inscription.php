@@ -13,10 +13,12 @@ include '../Includes/functions.php';
           $prenom = checkInput($_POST['prenom']);
           $email  = checkInput($_POST['email']);
           $mdp = checkInput($_POST['mdp']);
+          //Cryptage du mot de passe
           $hashedMdp = sha1($mdp);
           $Cmdp = checkInput($_POST['Cmdp']);
           $ChashedMdp = sha1($Cmdp);
           
+          //Vérifier si les champs ne sont pas null
           if(empty($nom)){
             $nomERROR = "Ce champ ne peut pas être vide";
             $isSuccess = false;
@@ -31,6 +33,7 @@ include '../Includes/functions.php';
            $emailERROR = "Ce champ ne peut pas être vide";
            $isSuccess = false;
           }
+          //Vérifier si l'email est unique
           else{
             $stmt2 = $db->prepare("SELECT email_membre, email_club FROM membre , club WHERE email_club = ? OR email_membre = ? ");
             $stmt2->execute(array($email,$email));
@@ -51,6 +54,7 @@ include '../Includes/functions.php';
             $mdpERROR = "Ce champ ne peut pas être vide";
             $isSuccess = false;
            }
+           //Vérifier si les mot de passe sont identiques
            else
            {
              if($hashedMdp != $ChashedMdp)

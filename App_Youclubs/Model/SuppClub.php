@@ -5,7 +5,7 @@
     
     $id_club    = "";
     $Success ="";
-    $id_club = isset($_GET['id_club']) && is_numeric($_GET['id_club']) ? intval($_GET['id_club']) : 0;
+    $id_club = isset($_GET['id_club']);
 
     $stmt = $db->prepare("SELECT * FROM club WHERE id_club = ? LIMIT 1");
     $stmt->execute(array($id_club));

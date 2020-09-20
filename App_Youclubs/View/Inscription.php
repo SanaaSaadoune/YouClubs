@@ -50,27 +50,27 @@
               <div class="form-group">
                 <label for="exampleInputPassword1">Nom :</label>
                 <input type="text" name="nom" class="form-control" id="exampleInputPassword1">
-                <p style="color:red;text-align:left"> <?php echo $nomERROR; ?> </p>
+                <span style="color:red;text-align:left"> <?php echo $nomERROR; ?> </span>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Prénom :</label>
                 <input type="text" name="prenom" class="form-control" id="exampleInputPassword1">
-                <p style="color:red;text-align:left"> <?php echo $prenomERROR; ?> </p>
+                <span style="color:red;text-align:left"> <?php echo $prenomERROR; ?> </span>
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Email :</label>
                 <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <p style="color:red;text-align:left"> <?php echo $emailERROR; ?> </p>
+                <span style="color:red;text-align:left"> <?php echo $emailERROR; ?> </span>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Mot de passe :</label>
                 <input type="password" name="mdp" class="form-control" id="exampleInputPassword1">
-                <p style="color:red;text-align:left"> <?php echo $mdpERROR; ?> </p>
+                <span style="color:red;text-align:left"> <?php echo $mdpERROR; ?> </span>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Confirmation de mot de passe :</label>
                 <input type="password" name="Cmdp" class="form-control" id="exampleInputPassword1">
-                <p style="color:red;text-align:left"> <?php echo $CmdpERROR; ?> </p>
+                <span style="color:red;text-align:left"> <?php echo $CmdpERROR; ?> </span>
               </div>
               <button type="submit" name="Inscription" class="btn btn-primary" style="  padding:8px 25px; margin-left: 200px; border-radius: 2em;">S'inscrire</button>
           </form>
