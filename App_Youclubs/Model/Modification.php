@@ -6,7 +6,7 @@
     $id_event    = $nom = $photo = $description = $date  = $nomERROR = $dateERROR = $photoERROR  = $descriptionERROR = "";
     $isSuccess  = $status = $ChangeImage = true;
     $Success ="";
-    $id_event = isset($_GET['id_event']);
+    $id_event = isset($_GET['id_event']) && is_numeric($_GET['id_event']) ? intval($_GET['id_event']) : 0;
 
     if( $_SESSION["club"] == null){
         header("Location:../View/LoginTest.php");

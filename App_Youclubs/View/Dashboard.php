@@ -25,7 +25,6 @@
     <table class="table table-hover">
         <thead>
           <tr>
-            <th style="text-align: center;" scope="col">Id du club</th>
             <th style="text-align: center;" scope="col">Nom du club</th>
             <th style="text-align: center;" scope="col">Email du club</th>
             <th style="text-align: center;" scope="col" >Modifier le club</th>
@@ -37,7 +36,6 @@
         ?>        
         <tbody>
           <tr>
-            <th style="text-align: center;" scope="row"> <?php echo $row->id_club ?> </th>
             <td style="text-align: center;"><?php echo $row->nom_club ?></td>
             <td style="text-align: center;"><?php echo $row->email_club ?></td>
             <td style="text-align: center;">

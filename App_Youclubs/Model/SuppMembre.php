@@ -5,7 +5,7 @@
     
     $id_membre  = "";
     $Success ="";
-    $id_membre = isset($_GET['id_membre']);
+    $id_membre = isset($_GET['id_membre']) && is_numeric($_GET['id_membre']) ? intval($_GET['id_membre']) : 0;
 
     $stmt = $db->prepare("SELECT * FROM membre WHERE id_membre = ? LIMIT 1");
     $stmt->execute(array($id_membre));

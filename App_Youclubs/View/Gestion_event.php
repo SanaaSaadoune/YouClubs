@@ -24,7 +24,6 @@
     <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col" style="text-align:center;">Id</th>
             <th scope="col" style="text-align:center;">Photo</th>
             <th scope="col" style="text-align:center;">Nom</th>
             <th scope="col" style="text-align:center;">Date</th>
@@ -37,7 +36,6 @@
         ?>        
         <tbody>
           <tr>
-            <th style="text-align:center;"scope="row"> <?php echo $row->id_event ?> </th>
             <td style="text-align:center;"><img height="100px" width="100px" src='../Public/Images_event/<?php echo $row->photo_event ?>' alt="photo_event"></td>
             <td style="text-align:center;"><?php echo $row->nom_event ?></td>
             <td style="text-align:center;"><?php echo $row->date_event ?></td>

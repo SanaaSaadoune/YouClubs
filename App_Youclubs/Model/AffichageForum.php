@@ -58,7 +58,7 @@ session_start();
 
 
         //Supprimer la suggestion par le membre
-        $id_suggest = isset($_GET['id_suggest']);
+        $id_suggest = isset($_GET['id_suggest']) && is_numeric($_GET['id_suggest']) ? intval($_GET['id_suggest']) : 0;
 
         if(isset($_POST['Supprimer']))
         {  

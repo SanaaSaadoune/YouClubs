@@ -71,7 +71,7 @@
                   <p id="desc"> <?php echo $row->description_event ?></p>
                     <div class="infosEvent"> 
                         <h5> <?php echo $row->date_event ?> </h5>
-                        <p> <?php echo $row->nom_event ?><br> <span>~Club <?php echo $row->nom_club?></span></p>
+                        <p style="width:auto;"> <?php echo $row->nom_event ?><br> <span>~Club <?php echo $row->nom_club?></span></p>
                         <?php $_SESSION['desc']= $row->description_event ?>
                     </div>
                     
