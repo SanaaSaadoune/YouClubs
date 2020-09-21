@@ -1,10 +1,9 @@
 <?php
 
 include '../Model/DataBase.php';
+
+
 session_start();
-    if( $_SESSION["membre"] == null){
-    header("Location:../View/LoginTest.php");
-    }else{
         $ERROR="";$Success="";$Failed="";$isSuccess=true;
 
         //Affichage suggestions
@@ -70,4 +69,4 @@ session_start();
             
         }
 
-    }  
+    

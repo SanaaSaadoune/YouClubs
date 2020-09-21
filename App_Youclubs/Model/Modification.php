@@ -9,10 +9,10 @@
     $id_event = isset($_GET['id_event']) && is_numeric($_GET['id_event']) ? intval($_GET['id_event']) : 0;
 
     if( $_SESSION["club"] == null){
-        header("Location:../View/LoginTest.php");
+        header("Location:../View/Connexion.php");
     }else if($do != 'modif')
     {
-        header("Location:../View/LoginTest.php");
+        header("Location:../View/Connexion.php");
     }
     else{
         $stmt = $db->prepare("SELECT DATE_FORMAT(date_event, '%Y-%m-%dT%H:%i:%s') as date_event, nom_event, photo_event,description_event FROM evenement WHERE id_event = ? LIMIT 1");

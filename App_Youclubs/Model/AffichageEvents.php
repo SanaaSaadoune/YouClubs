@@ -53,4 +53,3 @@
             $rows = $stmt->fetchAll();
         }
     }
-

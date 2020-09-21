@@ -1,6 +1,5 @@
 <?php 
   include '../Model/Consultation.php';
-  session_start();
 ?>
 
 <!DOCTYPE html>

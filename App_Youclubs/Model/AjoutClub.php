@@ -9,7 +9,7 @@ include '../Includes/functions.php';
     
     session_start();
     if( $_SESSION["admin"] == null){
-       header("Location:../View/LoginTest.php");
+       header("Location:../View/Connexion.php");
     }else{
         //Ajouter un club
         if(isset($_POST['Ajouter'])){

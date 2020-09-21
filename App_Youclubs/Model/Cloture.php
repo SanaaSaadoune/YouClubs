@@ -8,10 +8,10 @@
     $id_event = isset($_GET['id_event']) && is_numeric($_GET['id_event']) ? intval($_GET['id_event']) : 0;
 
     if( $_SESSION["club"] == null){
-        header("Location:../View/LoginTest.php");
+        header("Location:../View/Connexion.php");
     }
     else if($do != 'cloture'){
-        header("Location:../View/LoginTest.php");
+        header("Location:../View/Connexion.php");
     }
     else{
         $stmt = $db->prepare("SELECT  nom_event , date_event FROM evenement WHERE id_event = ? LIMIT 1");

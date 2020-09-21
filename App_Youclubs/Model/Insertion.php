@@ -8,7 +8,7 @@ include '../Includes/functions.php';
 
     session_start();
     if( $_SESSION["club"] == null){
-       header("Location:../View/LoginTest.php");
+       header("Location:../View/Connexion.php");
     }else{
         if(isset($_POST['Ajouter'])){
           $nom = checkInput($_POST['nom']);

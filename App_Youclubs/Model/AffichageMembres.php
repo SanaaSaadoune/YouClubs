@@ -3,7 +3,7 @@
 
     session_start();
     if( $_SESSION["admin"] == null){
-    header("Location:../View/LoginTest.php");
+    header("Location:../View/Connexion.php");
     }else{
     
         if(isset($_GET['page']) && !empty($_GET['page'])){

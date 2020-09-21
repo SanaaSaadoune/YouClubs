@@ -5,7 +5,7 @@ include '../Includes/functions.php';
 
   session_start();
     if( $_SESSION["admin"] == null){
-       header("Location:../View/LoginTest.php");
+       header("Location:../View/Connexion.php");
     }else{
         $nom = $email = $mdp = $Cmdp = $id_club=  $nomERROR =  $emailERROR =  $mdpERROR = $CmdpERROR="";
         $Success ="";

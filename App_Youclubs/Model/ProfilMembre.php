@@ -4,7 +4,7 @@
     
     session_start();
     if( $_SESSION["membre"] == null){
-    header("Location:../View/LoginTest.php");
+    header("Location:../View/Connexion.php");
     
     }else{
         //Informations du membre connecté

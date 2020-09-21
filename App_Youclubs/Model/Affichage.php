@@ -2,7 +2,7 @@
     include '../Model/DataBase.php';
     session_start();
     if( $_SESSION["club"] == null){
-    header("Location:../View/LoginTest.php");
+    header("Location:../View/Connexion.php");
     
     }else{
         $do = isset($_GET['do']) ? $_GET['do'] : 'manage';
